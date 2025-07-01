@@ -48,7 +48,7 @@ fn update(state: &mut AppState, message: Message) -> Task<Message> {
                 let mut new_file = parent.to_path_buf();
                 new_file.push("output.mp3");
 
-                match Command::new("ffmpeg.exe")
+                match Command::new("ffmpeg")
                     .args([
                         "-i",
                         path_buf.to_str().unwrap_or(""),
